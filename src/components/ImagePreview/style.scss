@@ -1,0 +1,106 @@
+.imagePreview__imageCard {
+  transition: transform 0.4s linear;
+
+  // Having issues with bluriness, experimenting here:
+  filter: blur(0px);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+  //transform: translateZ(0);
+}
+
+.imagePreview__imageCard:hover {
+  cursor: pointer;
+  transform: scale(1.1) translateZ(0) translate3D(0, 0, 0);
+  //transform: perspective(1px) scale(1.1); // semi-solution for blur
+  //transform: perspective(1px) scale3d(1.1, 1.1, 1); // semi-solution for blur
+}
+
+*,
+*:before,
+*imagePreview__:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.imagePreview__container {
+  // padding: 1em 0;
+  //float: left;
+  // width: 50%;
+}
+/*
+.imagePreview__container .imagePreview__title {
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+*/
+.imagePreview__content {
+  position: relative;
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+.imagePreview__content .imagePreview__content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+/*
+.imagePreview__content:hover {
+  margin-top: 15%;
+}
+*/
+.imagePreview__content:hover .imagePreview__content-overlay {
+  opacity: 1;
+}
+.imagePreview__content-image {
+  width: 100%;
+}
+.imagePreview__content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 40%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+.imagePreview__content:hover .imagePreview__content-details {
+  top: 40%;
+  left: 50%;
+  opacity: 1;
+}
+/*
+.imagePreview__content:hover .imagePreview__content-text {
+  margin-top: 0px;
+}
+.imagePreview__content .imagePreview__content-text {
+  margin-top: 0px;
+}
+*/
+.imagePreview__content-details p {
+  color: #fff;
+  font-size: 0.8em;
+}
+.imagePreview__fadeIn-bottom {
+  top: 50%;
+}
