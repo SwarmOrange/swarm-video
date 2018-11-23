@@ -1,0 +1,8 @@
+{
+    "WEBPACK_PORT" : 3000,
+    "DEFAULT_HASH" : "048b5103a98120bc51f9c6495abde72f25c6d9f57de951122667853ccfba3f52",
+    "BEE_FREE_LOCATION" : "http://beefree.me",
+    "MIGRATION_PRODUCER_ORDER_ENDPOINT" : "/api/order",
+    "MIGRATION_PRODUCER_ORDER_USERNAME" : "developer",
+    "MIGRATION_PRODUCER_ORDER_PASSWORD" : "developer"
+}
